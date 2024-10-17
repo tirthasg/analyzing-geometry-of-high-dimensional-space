@@ -1,7 +1,17 @@
 import numpy as np
 
 
-def get_fraction_outside(npoints: int, ndim: int):
+def get_fraction_outside(npoints: int, ndim: int) -> float:
+    """
+    Computes the fraction of point outside of an unit sphere, which is contained within an unit cube in n-dimensional space
+
+    Args:
+        npoints (int): Number of points to generate in n-dimensional space
+        ndim (int): Number of dimensions
+
+    Returns:
+        fraction_of_points_outside (float): Fraction of points outside of unit sphere in n-dimensional space
+    """
     rng = np.random.default_rng(seed=42)
     points = rng.random(size=(npoints, ndim))
 
