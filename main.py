@@ -14,4 +14,7 @@ def get_fraction_outside(npoints: int, ndim: int):
 
 
 if __name__ == "__main__":
-    print(get_fraction_outside(npoints=100000, ndim=2))
+    npoints = 100000
+    for ndim in range(2, 21):
+        fraction_of_points_outside = get_fraction_outside(npoints=npoints, ndim=ndim)
+        print(f"For {ndim}, fraction outside = {fraction_of_points_outside}")
