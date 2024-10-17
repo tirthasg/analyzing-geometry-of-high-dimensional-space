@@ -1,10 +1,7 @@
 import numpy as np
 
 
-def get_fraction_outside():
-    npoints = 100000
-    ndim = 2
-
+def get_fraction_outside(npoints: int, ndim: int):
     rng = np.random.default_rng(seed=42)
     points = rng.random(size=(npoints, ndim))
 
@@ -17,4 +14,4 @@ def get_fraction_outside():
 
 
 if __name__ == "__main__":
-    print(get_fraction_outside())
+    print(get_fraction_outside(npoints=100000, ndim=2))
